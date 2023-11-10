@@ -56,7 +56,6 @@ const checkToken = () => {
         .then(res => res.json())
         .then((post) => {
             localStorage.removeItem("items")
-          (post)
         });
   }
   return (
