@@ -64,7 +64,6 @@ const Cart = () => {
 
     })
     setState(newArray)
-    (newArray)
 
   }
 
@@ -110,7 +109,6 @@ const Cart = () => {
         .then((post) => {
           getCartData(token)
           // alert("Item is Incremented")
-          (post)
         });
 
     } else{
@@ -139,8 +137,7 @@ const Cart = () => {
         .then(res => res.json())
         .then((post) => {
           getCartData(token)
-          // alert("Decremented")
-          (post)
+         
         });
     
     } else{

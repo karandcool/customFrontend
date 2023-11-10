@@ -115,11 +115,11 @@ const Product = () => {
   };
 
   const handleCheck = input => e => {
+    console.log(e)
+    console.log(input)
     // input value from the form
-    const {value } = e.target;
-    product[input] = value
-    (typeof(product?.selectedSize?.split(/[.?!]/g).filter(Boolean).length))
-    (typeof(product?.selectedColor?.split(/[.?!]/g).filter(Boolean).length))
+    const { value } = e.target;
+    product[input] = e.target.value
 
     // values[input] = value
 
