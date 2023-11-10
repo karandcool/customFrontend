@@ -197,7 +197,7 @@ const Cart = () => {
       orderStatus: 'Pending',
 
     }
-    fetch("https://customxpert.onrender.comapi/order", {
+    fetch("https://customxpert.onrender.com/api/order", {
           method: 'POST',
           headers: { 'Content-Type': 'application/json',
                       'token': `Bearer ${token?.token}`

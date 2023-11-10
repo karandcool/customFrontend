@@ -20,7 +20,7 @@ const Register = () => {
 
       const submitData = (e) => {
         e.preventDefault()
-        fetch("https://customxpert.onrender.comapi/user", {
+        fetch("https://customxpert.onrender.com/api/user", {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(userForm)

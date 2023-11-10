@@ -23,7 +23,7 @@ const checkToken = () => {
   }
   const submitLogin = (e) => {
     e.preventDefault()
-    fetch("https://customxpert.onrender.comapi/user/signin", {
+    fetch("https://customxpert.onrender.com/api/user/signin", {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(loginForm)
@@ -46,7 +46,7 @@ const checkToken = () => {
   }
 
   const addToCart = (token) => {
-    fetch("https://customxpert.onrender.comapi/cart", {
+    fetch("https://customxpert.onrender.com/api/cart", {
           method: 'POST',
           headers: { 'Content-Type': 'application/json',
                       'token': `Bearer ${token}`        
