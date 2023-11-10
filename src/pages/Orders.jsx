@@ -33,9 +33,9 @@ const Orders =  () => {
         if(type === 'All') { 
            await setSelectedOrders(allOrders)
         } else{
-            (type)
+           
             const newData =  await allOrders.filter((element, index) => element.orderStatus == type)
-            (newData)
+           
             setSelectedOrders(newData)
         }
         

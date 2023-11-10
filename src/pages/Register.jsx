@@ -14,7 +14,7 @@ const Register = () => {
         }
     }
     const handleInputChange = (e) => {
-        (e.target.name, e.target.value)
+        
         setUserForm({ ...userForm, [e.target.name]: e.target.value})
       }
 
@@ -35,7 +35,7 @@ const Register = () => {
           else{
             alert("email already exists")
           }
-          (post)
+         
         });
       }
     return (

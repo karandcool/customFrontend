@@ -23,17 +23,17 @@ const Product = () => {
   const dispatch = useDispatch();
 
   const addProduct = async (product) => {
-    (count)
+    
     if( (product?.selectedSize?.split(/[.?!]/g).filter(Boolean).length + product?.selectedColor?.split(/[.?!]/g).filter(Boolean).length == count) || count == 0 ) {
       setAdd(true)
       if(localStorage.getItem("token")) {
         product.qty = 1
-        (product)
+        
   addToCart(JSON.parse(localStorage.getItem("token")), [product])
       } else{
         const products = JSON.parse(localStorage.getItem("items"))
       product['qty'] = 1
-      (products)
+      
       let addItem = []
       if(products) {
         addItem = [...products, product]
@@ -42,7 +42,7 @@ const Product = () => {
   
       }
       
-      (addItem)
+      
       localStorage.setItem("items", JSON.stringify(addItem))
       }
       toast("Item Added To Cart", {autoClose:2000});
@@ -66,7 +66,7 @@ const Product = () => {
         .then(res => res.json())
         .then((post) => {
           alert("Item is Added to Cart Api")
-          (post)
+          
         });
   }
   
@@ -86,7 +86,7 @@ const Product = () => {
         dataCount += 1
       }
       setCount(dataCount)
-      (data)
+    
       setProduct(data);
       getProductsByCategories(data)
       setLoading(false);
@@ -102,7 +102,7 @@ const Product = () => {
 
   const getProductsByCategories = async (data) => {
     setLoading(true);
-    (data)
+    
     const response = await fetch(`https://customxpert.onrender.com/api/item/category?category=${data?.categoryId}`);
     const catData = await response.json()
   //   getCatProduct(catData.categoryData[0]?._id)
@@ -236,7 +236,7 @@ const Product = () => {
         <div className="py-4 my-4">
           <div className="d-flex">
             { similarProducts.length > 0 && similarProducts.map((item) => {
-              {(item)}
+             
               return (
                
                 <div key={item?._id} className="card mx-4 text-center" onClick={() => goToItem(item?._id)}>

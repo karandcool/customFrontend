@@ -17,7 +17,6 @@ const CategoryCard = () => {
   const dispatch = useDispatch();
 
   const addProduct = (product) => {
-    (product)
     setLocalStorageItems(product)
     localStorage.setItem("items", [JSON.stringify(localStorageItems)])
 

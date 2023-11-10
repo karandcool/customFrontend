@@ -47,7 +47,7 @@ const StepOne = ({ items, nextStep, handleFormData, values }) => {
     }
     <div>
     {items.map((product) => {
-      {(product)}
+      
           return (
             
             <>

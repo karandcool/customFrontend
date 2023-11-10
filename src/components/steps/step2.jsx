@@ -96,7 +96,7 @@ const StepTwo = ({ nextStep, handleFormData, selectedItem, prevStep, values }) =
 
       }
 
-      (customImage)
+
       
       addToCart(file)
   
@@ -129,7 +129,7 @@ const StepTwo = ({ nextStep, handleFormData, selectedItem, prevStep, values }) =
           .then(res => res.json())
           .then((post) => {
             // alert("Item is Added to Cart Api")
-            (post)
+            
             setTimeout(() =>{
               navigate('/cart')
             }, 3000)
@@ -137,7 +137,7 @@ const StepTwo = ({ nextStep, handleFormData, selectedItem, prevStep, values }) =
           });
   }
   const handleData = input => e => {
-    (e)
+   
     // input value from the form
     const {value } = e.target;
     values[input] = value

@@ -42,7 +42,6 @@ const Cart = () => {
   },[])
   
   const getCartData = (getToken) => {
-    (token?.token)
     fetch("https://customxpert.onrender.com/api/cart", {
           method: 'GET',
           headers: { 'Content-Type': 'application/json',
@@ -54,7 +53,7 @@ const Cart = () => {
             localStorage.removeItem("items")
             setItemsInCart(post)
             // setState(post?.items)
-          (post)
+          
         });
   }
 
@@ -101,7 +100,7 @@ const Cart = () => {
   const addItem = (product, index) => {
     
     if(token) {
-      (token?.token)
+      
       fetch("https://customxpert.onrender.com/api/cart/addItem", {
           method: 'POST',
           headers: { 'Content-Type': 'application/json',
@@ -117,7 +116,7 @@ const Cart = () => {
         });
 
     } else{
-      (product, index)
+    
     const Bruno = state.findIndex((person) => person === product)
     const newData = [...state]
     newData[Bruno]['qty'] += 1
@@ -170,10 +169,10 @@ const Cart = () => {
         })
         .then(res => res.json())
         .then((post) => {
-          (post)
+          
           getCartData(token)
           // alert("Decremented")
-          (post)
+          
         });
     }else{
 
@@ -188,7 +187,7 @@ const Cart = () => {
   };
 
   const placeOrder = () => {
-    (state)
+   
     const data = {
       items: state,
       totalItems:totalItems,
@@ -209,7 +208,7 @@ const Cart = () => {
         })
         .then(res => res.json())
         .then((post) => {
-          (post)
+          
           navigate(`/order-completed/${post.message._id}`)
         });
   }
@@ -246,7 +245,7 @@ const Cart = () => {
       description: "Customise Clthing items",
       order_id: data.id,
       handler: async (response) => {
-        (response)
+       
         
          const paymentId = response.razorpay_payment_id;
          const url = `${API_URL}capture/${paymentId}`;
@@ -289,7 +288,7 @@ const confirm = () => {
   setShowModal(true)
 }
 const deleteCartData = () => {
-  (state)
+  
   fetch("https://customxpert.onrender.com/api/cart", {
           method: 'DELETE',
           headers: { 'Content-Type': 'application/json',
@@ -334,7 +333,7 @@ state?.map((item) => {
                   
                   <div className="card-body">
                     {state.map((item, index) => {
-                      {(item)}
+                     
                       return (
                         <div key={item.id}>
                           <div className="row d-flex align-items-center" style={{textAlignLast: 'center',

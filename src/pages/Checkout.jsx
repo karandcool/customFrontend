@@ -16,7 +16,7 @@ const Checkout = () => {
   },[])
 
   const getCartData = (getToken) => {
-    (getToken)
+    
     // (token?.token)
     fetch("https://customxpert.onrender.comapi/cart", {
           method: 'GET',

@@ -11,7 +11,6 @@ const RadioButton = ({allColors, values, handleData, availableColors, allSizes, 
 
 
     const onClickHandle = (data, selected) => {
-        (data)
         if(selected == 'selectedSize'){
             setSelectedSize(data)
         } else{
@@ -24,7 +23,6 @@ return(
     <div className="radioDiv">
  {allColors.length > 0 && <p>Select Your Color : {color}</p> }
     {allColors.length > 0 && allColors.map((data, index) => {
-        (data)
         return(
             <label class={data}  onClick={() => onClickHandle(data, "selectedColor")}>
         <input type="radio" name="color" value={data} onClick={handleData("selectedColor")}/>
@@ -40,7 +38,7 @@ return(
     })}
  {allSizes.length > 0 && <p>Select Your Size : {size }</p> }
 {allSizes.length > 0 && allSizes.map((data, index) => {
-        (data)
+        
         return(
             <label class={data} onClick={() => onClickHandle(data, "selectedSize")}  >
         <input type="radio" name="size" value={data} onClick={handleData("selectedSize")}/>
