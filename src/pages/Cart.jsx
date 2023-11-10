@@ -339,7 +339,7 @@ state?.map((item) => {
                                 data-mdb-ripple-color="light"
                               >
                                 <img
-                  src={`https://customxpert.onrender.com/${item?.finalcustomiseImage ? item?.finalcustomiseImage : item?.picture[0]}`}
+                  src={item?.finalcustomiseImage ? `https://customxpert.onrender.com/${item?.finalcustomiseImage}` : `https://customxpert.onrender.com/${item?.picture[0]}`}
                   // className="w-100"
                                   alt={item?.name}
                                   width={100}
