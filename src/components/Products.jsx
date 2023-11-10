@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
 // import { addCart } from "../redux/action";
 
 import Skeleton from "react-loading-skeleton";
@@ -10,10 +9,8 @@ const Products = () => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
   const [loading, setLoading] = useState(false);
-  const [localStorageItems, setLocalStorageItems] = useState([])
   let componentMounted = true;
 
-  const dispatch = useDispatch();
 
 //   const addProduct = (product) => {
 //     if(localStorage.getItem("token")) {
