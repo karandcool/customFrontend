@@ -33,9 +33,9 @@ const checkToken = () => {
           if(post.token) {
             addToCart(post.token)
             localStorage.setItem("token", JSON.stringify(post))
-            setTimeout(() => {
+            
               navigate((-1), {replace : true})
-            },1000)
+            
            
           }
           else{

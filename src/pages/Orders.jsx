@@ -25,7 +25,7 @@ const Orders =  () => {
         .then((post) => {
             setAllOrders(post)
             setSelectedOrders(post)
-            (post)
+           
             setLoading(false)   
         });
    }
