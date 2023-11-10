@@ -24,8 +24,6 @@ function Customise() {
           .then(res => res.json())
           .then((post) => {
             setCustomiseItems(post)
-              // setState(post?.items)
-            (post)
           });
     }
 

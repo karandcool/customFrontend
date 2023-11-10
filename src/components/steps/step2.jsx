@@ -107,13 +107,11 @@ const StepTwo = ({ nextStep, handleFormData, selectedItem, prevStep, values }) =
   };
 
     const addToCart =  (finalImage) => {
-      (image)
-      (selectedItem)
+     
       const newData = new FormData()
        newData.append("customImage",customImage )
        newData.append("finalCustomiseImage",finalImage )
        newData.append("itemData", JSON.stringify(selectedItem))
-      (newData)
       fetch("https://customxpert.onrender.com/api/cart/addCustomiseItem", {
             method: 'POST',
             headers: {
@@ -137,8 +135,7 @@ const StepTwo = ({ nextStep, handleFormData, selectedItem, prevStep, values }) =
     const {value } = e.target;
     values[input] = value
 
-    // //updating for data state taking previous state and then adding new value to create new object
-    (values)
+    
   }
   return (
     <div className="container-fluid">
@@ -157,7 +154,7 @@ const StepTwo = ({ nextStep, handleFormData, selectedItem, prevStep, values }) =
             src={`https://customxpert.onrender.com/${selectedItem?.picture[0]}`}
             alt="Card"
             height={300} />
-           {(customImage)}
+           
   {(customImage !== undefined || selectedText !== undefined) &&
         <div className="uploadData">
         {customImage &&
@@ -225,7 +222,7 @@ const StepTwo = ({ nextStep, handleFormData, selectedItem, prevStep, values }) =
 
             </div>}
             
-            {(selectedItem)}
+           
             <div className= {(selectedItem?.allColors.length > 0 || selectedItem?.allSizes.length > 0) ? "selectedThings" : 'placeNew'}>
               <div style={{marginTop: "20px"}}>
               <div className="parent">
