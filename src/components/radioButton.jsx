@@ -2,8 +2,6 @@ import { useState } from "react"
 import "./radioButton.css"
 
 const RadioButton = ({allColors, values, handleData, availableColors, allSizes, availableSize}) => {
-    (allColors)
-    (availableColors)
     const [color, setSelectedColor]  = useState()
     const [size, setSelectedSize]  = useState()
 

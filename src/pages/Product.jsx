@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Skeleton from "react-loading-skeleton";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Marquee from "react-fast-marquee";
-import { useDispatch } from "react-redux";
 // import { addCart } from "../redux/action";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -19,8 +18,6 @@ const Product = () => {
   const [count, setCount] = useState(0)
   const [add, setAdd] = useState(true)
   let componentMounted = true;
-
-  const dispatch = useDispatch();
 
   const addProduct = async (product) => {
     
@@ -79,10 +76,10 @@ const Product = () => {
       
       const data = await response.json();
       let dataCount = 0
-      if(data.allSizes.length > 0) {
+      if(data?.allSizes.length > 0) {
         dataCount += 1
       }
-      if(data.allColors.length > 0) {
+      if(data?.allColors.length > 0) {
         dataCount += 1
       }
       setCount(dataCount)
