@@ -14,7 +14,7 @@ const Register = () => {
         }
     }
     const handleInputChange = (e) => {
-        console.log(e.target.name, e.target.value)
+        (e.target.name, e.target.value)
         setUserForm({ ...userForm, [e.target.name]: e.target.value})
       }
 
@@ -27,7 +27,7 @@ const Register = () => {
         })
         .then(res => res.json())
         .then((post) => {
-            // console.log(post)
+            // (post)
           if(post.status == 200) {
             // localStorage.setItem("token", JSON.stringify(post))
             navigate(`/login`, {replace : true})
@@ -35,7 +35,7 @@ const Register = () => {
           else{
             alert("email already exists")
           }
-          console.log(post)
+          (post)
         });
       }
     return (

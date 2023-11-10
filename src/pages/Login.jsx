@@ -18,7 +18,7 @@ const checkToken = () => {
     }
 }
   const handleInputChange = (e) => {
-    console.log(e.target.name, e.target.value)
+    (e.target.name, e.target.value)
     setLoginForm({ ...loginForm, [e.target.name]: e.target.value})
   }
   const submitLogin = (e) => {
@@ -30,7 +30,7 @@ const checkToken = () => {
         })
         .then(res => res.json())
         .then( (post) => {
-            console.log(post)
+            (post)
           if(post.token) {
             addToCart(post.token)
             localStorage.setItem("token", JSON.stringify(post))
@@ -42,7 +42,7 @@ const checkToken = () => {
           else{
             alert(post?.message)
           }
-          console.log(post)
+          (post)
         });
   }
 
@@ -57,7 +57,7 @@ const checkToken = () => {
         .then(res => res.json())
         .then((post) => {
             localStorage.removeItem("items")
-          console.log(post)
+          (post)
         });
   }
   return (

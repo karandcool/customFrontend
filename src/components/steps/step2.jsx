@@ -96,7 +96,7 @@ const StepTwo = ({ nextStep, handleFormData, selectedItem, prevStep, values }) =
 
       }
 
-      console.log(customImage)
+      (customImage)
       
       addToCart(file)
   
@@ -112,13 +112,13 @@ const StepTwo = ({ nextStep, handleFormData, selectedItem, prevStep, values }) =
   };
 
     const addToCart =  (finalImage) => {
-      console.log(image)
-      console.log(selectedItem)
+      (image)
+      (selectedItem)
       const newData = new FormData()
        newData.append("customImage",customImage )
        newData.append("finalCustomiseImage",finalImage )
        newData.append("itemData", JSON.stringify(selectedItem))
-      console.log(newData)
+      (newData)
       fetch("https://customxpert.onrender.com/api/cart/addCustomiseItem", {
             method: 'POST',
             headers: {
@@ -129,7 +129,7 @@ const StepTwo = ({ nextStep, handleFormData, selectedItem, prevStep, values }) =
           .then(res => res.json())
           .then((post) => {
             // alert("Item is Added to Cart Api")
-            console.log(post)
+            (post)
             setTimeout(() =>{
               navigate('/cart')
             }, 3000)
@@ -137,13 +137,13 @@ const StepTwo = ({ nextStep, handleFormData, selectedItem, prevStep, values }) =
           });
   }
   const handleData = input => e => {
-    console.log(e)
+    (e)
     // input value from the form
     const {value } = e.target;
     values[input] = value
 
     // //updating for data state taking previous state and then adding new value to create new object
-    console.log(values)
+    (values)
   }
   return (
     <div className="container-fluid">
@@ -162,7 +162,7 @@ const StepTwo = ({ nextStep, handleFormData, selectedItem, prevStep, values }) =
             src={`https://customxpert.onrender.com/${selectedItem?.picture[0]}`}
             alt="Card"
             height={300} />
-           {console.log(customImage)}
+           {(customImage)}
   {(customImage != undefined || selectedText != undefined) &&
         <div className="uploadData">
         {customImage &&
@@ -230,7 +230,7 @@ const StepTwo = ({ nextStep, handleFormData, selectedItem, prevStep, values }) =
 
             </div>}
             
-            {console.log(selectedItem)}
+            {(selectedItem)}
             <div className= {(selectedItem?.allColors.length > 0 || selectedItem?.allSizes.length > 0) ? "selectedThings" : 'placeNew'}>
               <div style={{marginTop: "20px"}}>
               <div className="parent">

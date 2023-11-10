@@ -25,7 +25,7 @@ function Customise() {
           .then((post) => {
             setCustomiseItems(post)
               // setState(post?.items)
-            console.log(post)
+            (post)
           });
     }
 

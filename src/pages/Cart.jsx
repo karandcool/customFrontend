@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Footer, Navbar } from "../components";
 import { useSelector, useDispatch } from "react-redux";
-import { addCart, delCart } from "../redux/action";
+// import { addCart, delCart } from "../redux/action";
 import { Link, useNavigate } from "react-router-dom";
 import { Modal, Button, InputGroup, Form, Row, Col, } from "react-bootstrap"
 import Popup from 'reactjs-popup';
@@ -42,7 +42,7 @@ const Cart = () => {
   },[])
   
   const getCartData = (getToken) => {
-    console.log(token?.token)
+    (token?.token)
     fetch("https://customxpert.onrender.com/api/cart", {
           method: 'GET',
           headers: { 'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ const Cart = () => {
             localStorage.removeItem("items")
             setItemsInCart(post)
             // setState(post?.items)
-          console.log(post)
+          (post)
         });
   }
 
@@ -67,7 +67,7 @@ const Cart = () => {
 
     })
     setState(newArray)
-    console.log(newArray)
+    (newArray)
 
   }
 
@@ -101,7 +101,7 @@ const Cart = () => {
   const addItem = (product, index) => {
     
     if(token) {
-      console.log(token?.token)
+      (token?.token)
       fetch("https://customxpert.onrender.com/api/cart/addItem", {
           method: 'POST',
           headers: { 'Content-Type': 'application/json',
@@ -113,11 +113,11 @@ const Cart = () => {
         .then((post) => {
           getCartData(token)
           // alert("Item is Incremented")
-          console.log(post)
+          (post)
         });
 
     } else{
-      console.log(product, index)
+      (product, index)
     const Bruno = state.findIndex((person) => person === product)
     const newData = [...state]
     newData[Bruno]['qty'] += 1
@@ -143,7 +143,7 @@ const Cart = () => {
         .then((post) => {
           getCartData(token)
           // alert("Decremented")
-          console.log(post)
+          (post)
         });
     
     } else{
@@ -170,10 +170,10 @@ const Cart = () => {
         })
         .then(res => res.json())
         .then((post) => {
-          console.log(post)
+          (post)
           getCartData(token)
           // alert("Decremented")
-          console.log(post)
+          (post)
         });
     }else{
 
@@ -188,7 +188,7 @@ const Cart = () => {
   };
 
   const placeOrder = () => {
-    console.log(state)
+    (state)
     const data = {
       items: state,
       totalItems:totalItems,
@@ -209,7 +209,7 @@ const Cart = () => {
         })
         .then(res => res.json())
         .then((post) => {
-          console.log(post)
+          (post)
           navigate(`/order-completed/${post.message._id}`)
         });
   }
@@ -246,7 +246,7 @@ const Cart = () => {
       description: "Customise Clthing items",
       order_id: data.id,
       handler: async (response) => {
-        console.log(response)
+        (response)
         
          const paymentId = response.razorpay_payment_id;
          const url = `${API_URL}capture/${paymentId}`;
@@ -289,7 +289,7 @@ const confirm = () => {
   setShowModal(true)
 }
 const deleteCartData = () => {
-  console.log(state)
+  (state)
   fetch("https://customxpert.onrender.com/api/cart", {
           method: 'DELETE',
           headers: { 'Content-Type': 'application/json',
@@ -334,7 +334,7 @@ state?.map((item) => {
                   
                   <div className="card-body">
                     {state.map((item, index) => {
-                      {console.log(item)}
+                      {(item)}
                       return (
                         <div key={item.id}>
                           <div className="row d-flex align-items-center" style={{textAlignLast: 'center',

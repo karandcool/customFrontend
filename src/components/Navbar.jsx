@@ -30,7 +30,7 @@ const Navbar = () => {
     //           localStorage.removeItem("items")
     //           setItemsInCart(post)
     //           // setState(post?.items)
-    //         console.log(post)
+    //         (post)
     //       });
     // }
     // const setItemsInCart = (data) => {
@@ -40,7 +40,7 @@ const Navbar = () => {
     //       newArray.push({ ...item.item, qty: item.qty } )
     //     })
     //     setState(newArray)
-    //     console.log(newArray)
+    //     (newArray)
     //   }
     const checkLogin = localStorage.getItem("token")
     const logout = () => {

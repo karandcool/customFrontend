@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { addCart } from "../redux/action";
+// import { addCart } from "../redux/action";
 
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
@@ -72,7 +72,7 @@ const CategoryItems = () => {
   }
 
   const getCatProduct = async (categoryId) => {
-    // console.log(categoryId)
+    // (categoryId)
     const response = await fetch(`https://customxpert.onrender.com/api/item/category?category=${categoryId}`);
     setFilter(await response.json())
   }

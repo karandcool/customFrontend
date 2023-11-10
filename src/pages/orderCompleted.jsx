@@ -30,7 +30,7 @@ export default () => {
     .then(res => res.json())
     .then((post) => {
         setOrderDetail(post[0])
-      console.log(post)
+      (post)
     });
   }
   return (

@@ -16,8 +16,8 @@ const Checkout = () => {
   },[])
 
   const getCartData = (getToken) => {
-    console.log(getToken)
-    // console.log(token?.token)
+    (getToken)
+    // (token?.token)
     fetch("https://customxpert.onrender.comapi/cart", {
           method: 'GET',
           headers: { 'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ const Checkout = () => {
         .then(res => res.json())
         .then((post) => {
             setItemsInCart(post)
-          console.log(post)
+          (post)
         });
   }
 
@@ -40,7 +40,7 @@ const Checkout = () => {
 
     })
     setState(newArray)
-    console.log(newArray)
+    (newArray)
 
   }
 

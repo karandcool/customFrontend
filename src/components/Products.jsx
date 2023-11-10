@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { addCart } from "../redux/action";
+// import { addCart } from "../redux/action";
 
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
@@ -18,12 +18,12 @@ const Products = () => {
 //   const addProduct = (product) => {
 //     if(localStorage.getItem("token")) {
 //       product.qty = 1
-//       console.log(product)
+//       (product)
 // addToCart(JSON.parse(localStorage.getItem("token")), [product])
 //     } else{
 //       const products = JSON.parse(localStorage.getItem("items"))
 //     product['qty'] = 1
-//     console.log(products)
+//     (products)
 //     let addItem = []
 //     if(products) {
 //       addItem = [...products, product]
@@ -32,7 +32,7 @@ const Products = () => {
 
 //     }
     
-//     console.log(addItem)
+//     (addItem)
 //     localStorage.setItem("items", JSON.stringify(addItem))
 //     }    
 //   };
@@ -47,7 +47,7 @@ const Products = () => {
   //       .then(res => res.json())
   //       .then((post) => {
   //         alert("Item is Added to Cart Api")
-  //         console.log(post)
+  //         (post)
   //       });
   // }
 
@@ -103,7 +103,7 @@ const Products = () => {
   };
 
   const getCatProduct = async (categoryId) => {
-    // console.log(categoryId)
+    // (categoryId)
     const response = await fetch(`https://customxpert.onrender.com/api/item/category?category=${categoryId}`);
     setFilter(await response.json())
   }

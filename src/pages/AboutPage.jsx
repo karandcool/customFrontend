@@ -3,9 +3,9 @@ import { Footer, Navbar } from "../components";
 const AboutPage = () => {
 
   // const getCategories = async () => {
-  //   console.log("jkwhkdhkshjbcjhbdscjhdbcjhdbcjhc")
+  //   ("jkwhkdhkshjbcjhbdscjhdbcjhdbcjhc")
   //   const response = await fetch("https://customxpert.onrender.comapi/category");
-  //   console.log(response)
+  //   (response)
   //   const catData = await response.json()
   //   setCategory(catData)
   // };

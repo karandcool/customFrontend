@@ -3,7 +3,7 @@ import { Navigate } from "react-router-dom";
 
 const Auth = ({ children }) => {
     if (localStorage.getItem("token")) {
-        console.log(children)
+        (children)
         return children;
       } else{
         return <Navigate to="/login" />;      }

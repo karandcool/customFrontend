@@ -25,7 +25,7 @@ const Orders =  () => {
         .then((post) => {
             setAllOrders(post)
             setSelectedOrders(post)
-            console.log(post)
+            (post)
             setLoading(false)   
         });
    }
@@ -33,9 +33,9 @@ const Orders =  () => {
         if(type === 'All') { 
            await setSelectedOrders(allOrders)
         } else{
-            console.log(type)
+            (type)
             const newData =  await allOrders.filter((element, index) => element.orderStatus == type)
-            console.log(newData)
+            (newData)
             setSelectedOrders(newData)
         }
         

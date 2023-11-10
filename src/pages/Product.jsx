@@ -3,7 +3,7 @@ import Skeleton from "react-loading-skeleton";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Marquee from "react-fast-marquee";
 import { useDispatch } from "react-redux";
-import { addCart } from "../redux/action";
+// import { addCart } from "../redux/action";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Footer, Navbar } from "../components";
@@ -23,17 +23,17 @@ const Product = () => {
   const dispatch = useDispatch();
 
   const addProduct = async (product) => {
-    console.log(count)
+    (count)
     if( (product?.selectedSize?.split(/[.?!]/g).filter(Boolean).length + product?.selectedColor?.split(/[.?!]/g).filter(Boolean).length == count) || count == 0 ) {
       setAdd(true)
       if(localStorage.getItem("token")) {
         product.qty = 1
-        console.log(product)
+        (product)
   addToCart(JSON.parse(localStorage.getItem("token")), [product])
       } else{
         const products = JSON.parse(localStorage.getItem("items"))
       product['qty'] = 1
-      console.log(products)
+      (products)
       let addItem = []
       if(products) {
         addItem = [...products, product]
@@ -42,7 +42,7 @@ const Product = () => {
   
       }
       
-      console.log(addItem)
+      (addItem)
       localStorage.setItem("items", JSON.stringify(addItem))
       }
       toast("Item Added To Cart", {autoClose:2000});
@@ -66,7 +66,7 @@ const Product = () => {
         .then(res => res.json())
         .then((post) => {
           alert("Item is Added to Cart Api")
-          console.log(post)
+          (post)
         });
   }
   
@@ -86,7 +86,7 @@ const Product = () => {
         dataCount += 1
       }
       setCount(dataCount)
-      console.log(data)
+      (data)
       setProduct(data);
       getProductsByCategories(data)
       setLoading(false);
@@ -102,7 +102,7 @@ const Product = () => {
 
   const getProductsByCategories = async (data) => {
     setLoading(true);
-    console.log(data)
+    (data)
     const response = await fetch(`https://customxpert.onrender.com/api/item/category?category=${data?.categoryId}`);
     const catData = await response.json()
   //   getCatProduct(catData.categoryData[0]?._id)
@@ -121,13 +121,13 @@ const Product = () => {
     // input value from the form
     const {value } = e.target;
     product[input] = value
-    console.log(typeof(product?.selectedSize?.split(/[.?!]/g).filter(Boolean).length))
-    console.log(typeof(product?.selectedColor?.split(/[.?!]/g).filter(Boolean).length))
+    (typeof(product?.selectedSize?.split(/[.?!]/g).filter(Boolean).length))
+    (typeof(product?.selectedColor?.split(/[.?!]/g).filter(Boolean).length))
 
     // values[input] = value
 
     // // //updating for data state taking previous state and then adding new value to create new object
-    // console.log(values)
+    // (values)
   }
 
   const Loading = () => {
@@ -236,7 +236,7 @@ const Product = () => {
         <div className="py-4 my-4">
           <div className="d-flex">
             { similarProducts.length > 0 && similarProducts.map((item) => {
-              {console.log(item)}
+              {(item)}
               return (
                
                 <div key={item?._id} className="card mx-4 text-center" onClick={() => goToItem(item?._id)}>
