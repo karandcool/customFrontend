@@ -1,0 +1,9 @@
+export { default as Navbar } from './Navbar';
+export { default as Main } from './main';
+export { default as Product } from './Products';
+export { default as Footer } from './Footer';
+export { default as CategoryCard } from './CategoryCard';
+export { default as CategoryItems } from './CategoryItems';
+export { default as Step1 } from './steps/step1';
+export { default as Step2 } from './steps/step2';
+export { default as Final } from './steps/final';

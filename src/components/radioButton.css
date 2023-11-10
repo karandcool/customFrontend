@@ -1,0 +1,131 @@
+/* html,
+body {
+  width: 100%;
+  height: 100%;  
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body {
+  box-sizing: border-box;
+  padding-top: 180px;
+  background: #ffffff;
+} */
+
+input {
+  display: none;
+}
+
+.button {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.button span {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  background: #eeeeee;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: ease .3s;
+}
+
+.button span:hover {
+  padding: 10px;
+}
+
+.sizeRadio {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  .sizeRadio span {
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding-top: 14px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    background: #ECECEC;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    transition: ease .3s;
+  }
+  
+  
+  /* .sizeRadio span:hover {
+    padding: 10px;
+  } */
+
+  /* .sizeRadio span::selection {
+    backgroud: space;
+  } */
+
+
+
+
+
+.layer {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: transparent;
+  /*transition: ease .3s;*/
+  z-index: -1;
+}
+
+/* .radioDiv {
+    display: inline-flex;
+    flex-flow: wrap
+} */
+
+/* .orange input:checked ~ .layer {
+  background: #F4511E;
+}
+
+.amber input:checked ~ .layer {
+  background: #FFB300;
+}
+
+.lime input:checked ~ .layer {
+  background: #7CB342;
+}
+
+.teal input:checked ~ .layer {
+  background: #00897B;
+}
+
+.blue input:checked ~ .layer {
+  background: #1E88E5;
+} */
+
+/* .indigo input:checked ~ .layer {
+  background: #3949AB;
+} */
