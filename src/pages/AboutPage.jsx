@@ -9,11 +9,7 @@ const AboutPage = () => {
   //   const catData = await response.json()
   //   setCategory(catData)
   // };
-  useEffect(() => {
-    // getCategories();
-  },[])
 
-  const [category, setCategory] = useState([]);
   
   
   return (

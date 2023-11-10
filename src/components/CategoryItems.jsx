@@ -11,10 +11,8 @@ const CategoryItems = () => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
   const [loading, setLoading] = useState(false);
-  const [localStorageItems, setLocalStorageItems] = useState([])
+  // const [localStorageItems, setLocalStorageItems] = useState([])
   let componentMounted = true;
-
-  const dispatch = useDispatch();
   const { id } = useParams();
 
 
@@ -71,11 +69,11 @@ const CategoryItems = () => {
     navigate(`/product/${id}`)
   }
 
-  const getCatProduct = async (categoryId) => {
-    // (categoryId)
-    const response = await fetch(`https://customxpert.onrender.com/api/item/category?category=${categoryId}`);
-    setFilter(await response.json())
-  }
+  // const getCatProduct = async (categoryId) => {
+  //   // (categoryId)
+  //   const response = await fetch(`https://customxpert.onrender.com/api/item/category?category=${categoryId}`);
+  //   setFilter(await response.json())
+  // }
   const ShowProducts = () => {
     return (
       <>

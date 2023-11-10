@@ -1,19 +1,15 @@
 
 import React, { useState } from "react";
 import { useEffect } from "react";
-import axios from "axios";
-import DragResizeContainer from 'react-drag-resize';
-import { Form, Card, Button } from "react-bootstrap";
+
+import { Button } from "react-bootstrap";
 import validator from "validator";
 import RadioButton from "../radioButton";
-import Draggable, { DraggableCore } from 'react-draggable';
 import {Rnd} from 'react-rnd'
-import { Resizable, ResizableBox } from 'react-resizable';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./step2.css"
 import * as htmlToImage from 'html-to-image';
-import { toPng, toJpeg, toBlob, toPixelData, toSvg } from 'html-to-image';
 // import { useRef } from "react";
 import { useScreenshot } from 'use-react-screenshot'
 import { createRef } from "react";
@@ -47,7 +43,6 @@ const StepTwo = ({ nextStep, handleFormData, selectedItem, prevStep, values }) =
   const [textPosition, setTextPosition] = useState({ x: 0, y: 0});
   const [resizeImage, setResizeImage] = useState({width: 100, height:100})
   const [resizeText, setResizeText] = useState({width: 100, height:100})
-  const [finalCustomiseImage, setFinalCustomiseImage] = useState()
   const ref = createRef(null)
   const [image, takeScreenshot] = useScreenshot()
   
@@ -163,7 +158,7 @@ const StepTwo = ({ nextStep, handleFormData, selectedItem, prevStep, values }) =
             alt="Card"
             height={300} />
            {(customImage)}
-  {(customImage != undefined || selectedText != undefined) &&
+  {(customImage !== undefined || selectedText !== undefined) &&
         <div className="uploadData">
         {customImage &&
         <Rnd

@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Footer, Navbar } from "../components";
-import { useSelector, useDispatch } from "react-redux";
 // import { addCart, delCart } from "../redux/action";
 import { Link, useNavigate } from "react-router-dom";
-import { Modal, Button, InputGroup, Form, Row, Col, } from "react-bootstrap"
-import Popup from 'reactjs-popup';
+import { Modal, Button,Form, Row, Col, } from "react-bootstrap"
+
 import 'reactjs-popup/dist/index.css';
-import { CheckoutProvider, Checkout, injectCheckout} from 'paytm-blink-checkout-react'
 import axios from "axios";
 import "./cart.css"
 
@@ -80,7 +78,7 @@ const Cart = () => {
       navigate("/login")
     }
   }
-  const dispatch = useDispatch();
+  
 
   const EmptyCart = () => {
     return (

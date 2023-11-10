@@ -1,7 +1,6 @@
 import { useState } from "react"
 import "./radioButton.css"
-import { useDebugValue } from "react"
-import { useEffect } from "react"
+
 const RadioButton = ({allColors, values, handleData, availableColors, allSizes, availableSize}) => {
     (allColors)
     (availableColors)
@@ -11,7 +10,7 @@ const RadioButton = ({allColors, values, handleData, availableColors, allSizes, 
 
 
     const onClickHandle = (data, selected) => {
-        if(selected == 'selectedSize'){
+        if(selected === 'selectedSize'){
             setSelectedSize(data)
         } else{
             setSelectedColor(data)

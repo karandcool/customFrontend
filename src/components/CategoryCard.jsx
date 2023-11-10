@@ -1,41 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+
 // import { addCart } from "../redux/action";
 
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
-import { Link, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 const CategoryCard = () => {
     const navigate = useNavigate();
   const [data, setData] = useState([]);
-  const [filter, setFilter] = useState(data);
+  // const [filter, setFilter] = useState(data);
   const [loading, setLoading] = useState(false);
   const [localStorageItems, setLocalStorageItems] = useState([])
   let componentMounted = true;
 
-  const dispatch = useDispatch();
-
-  const addProduct = (product) => {
-    setLocalStorageItems(product)
-    localStorage.setItem("items", [JSON.stringify(localStorageItems)])
-
-  //   const array = []
-  // if(localStorageItems.length > 0) {
-  //   array.push(...localStorageItems, product)
-  //   localStorage.setItem("items", JSON.stringify(array))
-
-  // }else{
-  //   setLocalStorageItems(product)
-  //   localStorage.setItem("items", JSON.stringify(product))
-  // } 
-    //  dispatch(addCart(product))
-  }
-
   useEffect(() => {
-    // if(localStorage.getItem("items")) {
-    //   setLocalStorageItems(JSON.parse(localStorage.getItem("items")))
-    // } 
+    
     const getCategories = async () => {
       setLoading(true);
       const response = await fetch("https://customxpert.onrender.com/api/category");

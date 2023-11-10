@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import { Form, Card, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import validator from "validator";
 import "./step1.css"
 import { useEffect } from "react";
@@ -11,7 +11,7 @@ const StepOne = ({ items, nextStep, handleFormData, values }) => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    if(items.length > 0) {
+    if(items?.length > 0) {
       setLoading(false)
     }
   },[])

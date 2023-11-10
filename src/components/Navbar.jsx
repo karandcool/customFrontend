@@ -2,22 +2,11 @@ import React from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { useEffect } from 'react'
-import { useState } from 'react'
 
 const Navbar = () => {
     const navigate = useNavigate()
     // const [state, setState] = useState();
     
-    
-    useEffect(() => {
-        // if(localStorage.getItem("token")) {
-        //     getCartData(JSON.parse(localStorage.getItem("token")))
-        // } else{
-        //     setState(JSON.parse(localStorage.getItem("items")))
-
-        // }
-
-    },[])
     // const getCartData = (getToken) => {
     //     fetch("https://customxpert.onrender.comapi/cart", {
     //         method: 'GET',

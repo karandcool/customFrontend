@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 // import store from './redux/store';
 import "./index.css";
 
-import { Home, Product, Products, AboutPage, ContactPage, Cart, Login, Register, Checkout, PageNotFound, Customise, Orders } from "./pages"
+import { Home, Product, AboutPage, ContactPage, Cart, Login, Register, Checkout, PageNotFound, Customise, Orders } from "./pages"
 import Categories from './pages/Categories';
 import { CategoryItems } from './components';
 import Auth from './components/Auth';
