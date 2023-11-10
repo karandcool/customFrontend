@@ -30,7 +30,6 @@ const checkToken = () => {
         })
         .then(res => res.json())
         .then( (post) => {
-          (post)
           if(post.token) {
             addToCart(post.token)
             localStorage.setItem("token", JSON.stringify(post))
